@@ -48,7 +48,7 @@ async def post_image():
     print("Posted:", image)
 
 
-@tasks.loop(time=time(hour=20, minute=0))
+@tasks.loop(time=time(hour=18, minute=0))
 async def daily_post():
     await post_image()
 
